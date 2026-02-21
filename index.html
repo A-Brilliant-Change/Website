@@ -37,8 +37,9 @@
       </a>
 
       <ul class="nav-links" role="list">
-        <li><a href="#mission" class="hide-mobile">Mission</a></li>
-        <li><a href="#how-we-help" class="hide-mobile">How We Help</a></li>
+        <li><a href="#mission" class="hide-mobile">Our Mission</a></li>
+        <li><a href="#how-we-help" class="hide-mobile">What We Do</a></li>
+        <li><a href="#impact-lab" class="hide-mobile">✨ Impact Lab</a></li>
         <li><a href="#get-involved" class="hide-mobile">Get Involved</a></li>
         <li>
           <a class="btn btn-donate nav-donate-btn" href="#donate" aria-label="Donate to A Brilliant Change">
@@ -261,6 +262,111 @@
     </section>
 
     <!-- ============================================================
+         IMPACT LAB — AI-Powered Tools
+    ============================================================ -->
+    <section class="impact-lab" id="impact-lab" aria-labelledby="impact-lab-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">✨ Impact Lab</p>
+          <h2 id="impact-lab-heading">See your impact in action</h2>
+          <p>
+            Use our AI-powered tools to discover how your donation moves people
+            forward, or how your unique skills can serve our community.
+          </p>
+        </div>
+
+        <div class="impact-lab-grid">
+
+          <!-- Tool 1: Impact Story Generator -->
+          <div class="impact-tool-card" id="impact-tool-impact">
+            <div class="impact-tool-header">
+              <div class="impact-tool-icon" aria-hidden="true">
+                <!-- Heart icon -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+              </div>
+              <h3>Impact Story Generator</h3>
+            </div>
+            <p class="impact-tool-desc">
+              Enter a donation amount to see a specific, real-world example of
+              what your gift could support for a neighbor in Tulsa.
+            </p>
+            <div class="impact-tool-input-row">
+              <label for="donation-amount" class="sr-only">Donation amount in dollars</label>
+              <span class="input-prefix" aria-hidden="true">$</span>
+              <input
+                id="donation-amount"
+                type="number"
+                min="1"
+                placeholder="50"
+                value="50"
+                class="impact-input"
+                aria-label="Donation amount"
+              />
+              <button
+                class="btn btn-donate impact-tool-btn"
+                id="impact-story-btn"
+                aria-label="Generate impact story"
+              >
+                <!-- Sparkles icon -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5z"/>
+                  <path d="M5 3l.75 2.25L8 6l-2.25.75L5 9l-.75-2.25L2 6l2.25-.75z"/>
+                  <path d="M19 13l.75 2.25L22 16l-2.25.75L19 19l-.75-2.25L16 16l2.25-.75z"/>
+                </svg>
+                Show My Impact
+              </button>
+            </div>
+            <div class="impact-tool-result" id="impact-story-result" aria-live="polite" hidden></div>
+          </div>
+
+          <!-- Tool 2: Volunteer Skills Matcher -->
+          <div class="impact-tool-card" id="impact-tool-volunteer">
+            <div class="impact-tool-header">
+              <div class="impact-tool-icon impact-tool-icon--volunteer" aria-hidden="true">
+                <!-- Briefcase icon -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                </svg>
+              </div>
+              <h3>Volunteer Skills Matcher</h3>
+            </div>
+            <p class="impact-tool-desc">
+              Tell us what you're good at, and we'll show you how your skills
+              could contribute to sustainable forward motion for Tulsa.
+            </p>
+            <div class="impact-tool-input-row impact-tool-input-row--col">
+              <label for="volunteer-skills" class="sr-only">Your skills or background</label>
+              <textarea
+                id="volunteer-skills"
+                rows="3"
+                placeholder="e.g. tutoring, carpentry, bookkeeping, social media…"
+                class="impact-input impact-textarea"
+                aria-label="Your skills or background"
+              ></textarea>
+              <button
+                class="btn btn-volunteer-dark impact-tool-btn"
+                id="volunteer-match-btn"
+                aria-label="Find volunteer match"
+              >
+                <!-- Arrow right icon -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+                Match My Skills
+              </button>
+            </div>
+            <div class="impact-tool-result" id="volunteer-match-result" aria-live="polite" hidden></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
          GET INVOLVED — Volunteer / Community Ambassador
     ============================================================ -->
     <section class="get-involved" id="get-involved" aria-labelledby="get-involved-heading">
@@ -386,8 +492,9 @@
       <nav aria-label="Footer navigation: Organization">
         <h4>Organization</h4>
         <ul role="list">
-          <li><a href="#mission">Mission</a></li>
-          <li><a href="#how-we-help">How We Help</a></li>
+          <li><a href="#mission">Our Mission</a></li>
+          <li><a href="#how-we-help">What We Do</a></li>
+          <li><a href="#impact-lab">✨ Impact Lab</a></li>
           <li><a href="#get-involved">Get Involved</a></li>
           <li><a href="#donate">Donate</a></li>
         </ul>
@@ -417,6 +524,134 @@
   <script>
     // Keep copyright year current
     document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- ============================================================
+       IMPACT LAB — AI Integration (Gemini)
+  ============================================================ -->
+  <script>
+  (function () {
+    'use strict';
+
+    // API key is injected by the hosting environment at runtime.
+    const apiKey = "";
+    const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent?key=${apiKey}`;
+
+    /* ---------- helpers ---------- */
+
+    function setLoading(btn, resultEl, isLoading) {
+      btn.disabled = isLoading;
+      if (isLoading) {
+        btn.dataset.origText = btn.innerHTML;
+        btn.innerHTML =
+          '<svg class="spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> Generating…';
+        resultEl.hidden = true;
+      } else {
+        btn.innerHTML = btn.dataset.origText || btn.innerHTML;
+      }
+    }
+
+    const COPY_ICON =
+      '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      '<rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>' +
+      '<path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+
+    function showResult(resultEl, text) {
+      resultEl.hidden = false;
+      resultEl.innerHTML =
+        '<p class="impact-result-text"></p>' +
+        `<button class="impact-copy-btn" aria-label="Copy result to clipboard">${COPY_ICON} Copy</button>`;
+      resultEl.querySelector('.impact-result-text').textContent = text;
+      resultEl.querySelector('.impact-copy-btn').addEventListener('click', function () {
+        var copyBtn = resultEl.querySelector('.impact-copy-btn');
+        navigator.clipboard.writeText(text).then(function () {
+          copyBtn.textContent = '✓ Copied!';
+          setTimeout(function () { copyBtn.innerHTML = COPY_ICON + ' Copy'; }, 2000);
+        }).catch(function () {
+          // Fallback for browsers where clipboard API is unavailable
+          try {
+            var ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            copyBtn.textContent = '✓ Copied!';
+            setTimeout(function () { copyBtn.innerHTML = COPY_ICON + ' Copy'; }, 2000);
+          } catch (e) {
+            copyBtn.textContent = 'Copy failed — please copy manually';
+          }
+        });
+      });
+    }
+
+    async function callGemini(prompt, systemInstruction, btn, resultEl) {
+      setLoading(btn, resultEl, true);
+      var delay = 1000;
+      for (var i = 0; i < 5; i++) {
+        try {
+          var response = await fetch(API_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              contents: [{ parts: [{ text: prompt }] }],
+              systemInstruction: { parts: [{ text: systemInstruction }] }
+            })
+          });
+          if (!response.ok) throw new Error('API error ' + response.status);
+          var data = await response.json();
+          var text = data.candidates &&
+                     data.candidates[0] &&
+                     data.candidates[0].content &&
+                     data.candidates[0].content.parts &&
+                     data.candidates[0].content.parts[0] &&
+                     data.candidates[0].content.parts[0].text;
+          if (!text) throw new Error('Empty response');
+          setLoading(btn, resultEl, false);
+          showResult(resultEl, text);
+          return;
+        } catch (err) {
+          if (i === 4) {
+            setLoading(btn, resultEl, false);
+            showResult(resultEl, "We couldn't reach the AI assistant right now. Please try again later.");
+          } else {
+            await new Promise(function (resolve) { setTimeout(resolve, delay); });
+            delay *= 2;
+          }
+        }
+      }
+    }
+
+    /* ---------- Impact Story Generator ---------- */
+    var impactBtn    = document.getElementById('impact-story-btn');
+    var impactInput  = document.getElementById('donation-amount');
+    var impactResult = document.getElementById('impact-story-result');
+
+    impactBtn.addEventListener('click', function () {
+      var amount = impactInput.value || '50';
+      var system = "You are a specialized AI assistant for A Brilliant Change Inc. (ABC), a Tulsa-based nonprofit. Your goal is to show donors the tangible impact of their money. Our pillars are Outreach, Skill-building, and Systems of Dignity. Be inspiring, realistic (don't over-promise), and keep it under 100 words. Focus on the transition from 'instability' to 'forward motion'.";
+      var prompt  = `A donor wants to give $${amount}. Write a brief, specific story or example of what this could support for a neighbor in Tulsa. For example, it might cover transit to a new job, a specific workshop material set, or an outreach hygiene kit. Use inclusive, dignity-focused language.`;
+      callGemini(prompt, system, impactBtn, impactResult);
+    });
+
+    /* ---------- Volunteer Skills Matcher ---------- */
+    var volunteerBtn    = document.getElementById('volunteer-match-btn');
+    var volunteerInput  = document.getElementById('volunteer-skills');
+    var volunteerResult = document.getElementById('volunteer-match-result');
+
+    volunteerBtn.addEventListener('click', function () {
+      var skills = volunteerInput.value.trim();
+      if (!skills) {
+        volunteerInput.focus();
+        return;
+      }
+      var system = "You are a Volunteer Coordinator AI for A Brilliant Change (ABC) in Tulsa. Your job is to take a user's skills and explain how they might align with our mission of Outreach, Skill-building, or Systems of Dignity. Be welcoming and encouraging, but clarify that specific opportunities depend on current needs and vetting. Keep it under 100 words.";
+      var prompt  = `A potential volunteer says: "${skills}". Explain how these specific skills could contribute to "sustainable forward motion" for our community members in Tulsa. Connect it back to our core pillars without making a definitive job offer.`;
+      callGemini(prompt, system, volunteerBtn, volunteerResult);
+    });
+  })();
   </script>
 
 </body>
