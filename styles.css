@@ -408,6 +408,146 @@ ul { list-style: none; }
   line-height: 1.6;
 }
 
+/* ---------- Impact Lab ---------- */
+.impact-lab {
+  padding: var(--section-pad);
+  background: var(--color-bg);
+}
+.impact-lab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.75rem;
+}
+.impact-tool-card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.impact-tool-header {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+.impact-tool-icon {
+  width: 44px; height: 44px;
+  background: #d5f5e3;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-cta-donate);
+  flex-shrink: 0;
+}
+.impact-tool-icon--volunteer {
+  background: #eaf4fb;
+  color: var(--color-brand-accent);
+}
+.impact-tool-header h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-brand-primary);
+}
+.impact-tool-desc {
+  font-size: .9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+.impact-tool-input-row {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  flex-wrap: wrap;
+}
+.impact-tool-input-row--col {
+  flex-direction: column;
+  align-items: stretch;
+}
+.input-prefix {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+.impact-input {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  padding: .6rem .9rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  color: var(--color-text);
+  width: 6rem;
+  transition: border-color .15s ease;
+}
+.impact-input:focus {
+  outline: none;
+  border-color: var(--color-brand-accent);
+  box-shadow: 0 0 0 3px rgba(46,134,193,.18);
+}
+.impact-textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 80px;
+}
+.impact-tool-btn {
+  white-space: nowrap;
+}
+.impact-tool-btn:disabled {
+  opacity: .65;
+  cursor: not-allowed;
+  transform: none;
+  filter: none;
+}
+.impact-tool-result {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  margin-top: .25rem;
+}
+.impact-result-text {
+  font-size: .9375rem;
+  color: var(--color-text);
+  line-height: 1.65;
+  margin-bottom: .75rem;
+  white-space: pre-wrap;
+}
+.impact-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  background: none;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: .3rem .75rem;
+  font-family: var(--font-sans);
+  font-size: .8125rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: border-color .15s ease, color .15s ease;
+}
+.impact-copy-btn:hover {
+  border-color: var(--color-brand-accent);
+  color: var(--color-brand-accent);
+}
+.impact-copy-btn:focus-visible {
+  outline: 3px solid var(--color-brand-accent);
+  outline-offset: 2px;
+}
+/* Loading spinner animation */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.spin {
+  animation: spin .8s linear infinite;
+  display: inline-block;
+}
+
 /* ---------- Volunteer / Community Ambassador ---------- */
 .get-involved {
   padding: var(--section-pad);
